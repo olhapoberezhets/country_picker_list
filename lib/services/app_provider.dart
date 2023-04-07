@@ -48,6 +48,8 @@ class AppData extends ChangeNotifier {
       selectedCountry = country;
     }
 
+    numberController.text = '';
+
     notifyListeners();
   }
 
@@ -75,7 +77,6 @@ class AppData extends ChangeNotifier {
   void onCountryTap(BuildContext context, Country country) {
     Navigator.pop(context, country);
     _query = '';
-    notifyListeners();
   }
 
   Future<void> getAllCountries() async {
